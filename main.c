@@ -163,7 +163,6 @@ void parseElf(char *content, long filesize)
     }
 
     elf_headers->e_phnum -= 4;
-    memset(&content[0x38], 20, 1);
     elf_headers->e_ehsize = -1;
     elf_headers->e_ident[EI_CLASS] = ELFCLASSNONE;
     elf_headers->e_ident[EI_DATA] = ELFDATANONE;
